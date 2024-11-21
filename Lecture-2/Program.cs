@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Globalization;
+using System.Runtime.Serialization.Formatters;
+
 Console.WriteLine("Hello, World!");
 
 
@@ -166,3 +169,38 @@ do {
     Console.WriteLine("do(While) The value of i: " + i);
     i++;
 } while(i<5);
+
+
+/*
+for loop.. 
+for (statement 1; statement 2; statement 3) {
+}
+*/
+
+for (int j= 0; j <= 5; j++) {
+    Console.WriteLine("The value of j: "+ j);
+}
+
+for (int j = 10; j >0; j-=2) {
+    Console.WriteLine("The value of j: "+ j);
+}
+/*
+foreach
+*/
+
+Console.WriteLine("\n\n\n");
+/*
+    Nested: 
+
+*/
+i= 0;
+int z = 0;
+while(i < 5) {
+    z =0;
+    Console.WriteLine("The value of i: " +i+ " and j: " +z);
+    while(z < 5) {
+        Console.WriteLine("\tj: " +z);
+        z++;
+    }
+    i++;
+}

@@ -23,6 +23,7 @@ This repository contains notes and resources for students learning Object-Orient
 12. **C# if...else**
 13. **C# Switch**
 14. **C# While Loop**
+15. **For Loop**
 
 ## Contact
 
