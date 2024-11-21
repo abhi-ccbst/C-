@@ -88,3 +88,81 @@ if (time < 18) {
 
 string result = (time < 18) ? "Hello Abhi, Good Morniong" : "Hello Abhi, Good evening";
 Console.WriteLine(result);
+
+
+/*
+Switch statements 
+switch(expression) {
+    case x:
+        // code
+        break;
+    case y;
+        // code
+        break;
+    default:
+        // code
+        break;
+}
+*/
+
+int num = 70;
+switch (num)
+{
+    case 1:
+        Console.WriteLine("Its 1");
+        break;
+    case 2:
+        Console.WriteLine("Its 2");
+        break;
+    case 3:
+        Console.WriteLine("Its 3");
+        break;
+    case 4:
+        Console.WriteLine("Its 4");
+        break;
+    case 5:
+        Console.WriteLine("Its 5");
+        break;
+    case 6:
+        Console.WriteLine("Its 6");
+        break;
+    case 7:
+        Console.WriteLine("Its 7");
+        break;
+    case 8:
+        Console.WriteLine("Its 8");
+        break;
+    case 9:
+        Console.WriteLine("Its 9");
+        break;
+    case 10:
+        Console.WriteLine("Its 10");
+        break;
+    default:
+        Console.WriteLine("Its: " + num);
+        break;
+}
+
+
+/*
+While Loop
+while (condition) {
+}
+*/
+
+int i = 0;
+while (i < 5) {
+    Console.WriteLine("(while) The value of i: " + i);
+    i++;
+}
+
+/*
+do {
+    // Code block
+}while(condition)
+*/
+i = 0;
+do {
+    Console.WriteLine("do(While) The value of i: " + i);
+    i++;
+} while(i<5);
