@@ -212,3 +212,18 @@ for (i = 0; i <5; i++ ){
         Console.WriteLine("\tj: " +z);
     }
 }
+
+
+for (i = 0; i < 5; i++) {
+    for(z = 0; z <=i; z++ ) {
+        Console.Write(" *");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("\n");
+for (i = 5; i > 0; i--) {
+    for(z = 0; z <=i; z++) {
+        Console.Write(" *");
+    }
+    Console.WriteLine();
+}
