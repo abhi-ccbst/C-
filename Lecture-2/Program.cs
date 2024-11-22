@@ -204,3 +204,11 @@ while(i < 5) {
     }
     i++;
 }
+
+Console.WriteLine("\n\n\n");
+for (i = 0; i <5; i++ ){
+    Console.WriteLine("The value of i: " +i+ " and j: " +z);
+    for (z = 0; z < 5; z ++) {
+        Console.WriteLine("\tj: " +z);
+    }
+}
