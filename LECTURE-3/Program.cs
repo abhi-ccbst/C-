@@ -74,3 +74,22 @@ foreach(string car in cars) {
     Console.WriteLine($"value of car is {car}");
 }
 
+/*
+Array.Sort(cars)
+alp
+
+acending to decending
+*/
+
+Array.Sort(cars);
+
+foreach(string car in cars) {
+    Console.WriteLine($"value of car is {car}");
+}
+Array.Sort(counts);
+foreach(int car in counts) {
+    Console.WriteLine($"value of count is {car}");
+}
+Console.WriteLine(counts.Max());
+Console.WriteLine(counts.Min());
+Console.WriteLine(counts.Sum());
