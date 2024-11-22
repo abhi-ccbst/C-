@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "LECTURE-3/1.0.0": {
+        "runtime": {
+          "LECTURE-3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LECTURE-3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
