@@ -24,6 +24,7 @@ This repository contains notes and resources for students learning Object-Orient
 13. **C# Switch**
 14. **C# While Loop**
 15. **For Loop**
+16. **Star Patterm using for loop**
 
 ## Contact
 
