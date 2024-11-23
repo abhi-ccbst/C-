@@ -5,7 +5,8 @@
 This repository contains notes and resources for students learning Object-Oriented Programming in C#. The materials are organized into folders based on lecture topics and sequences. 
 
 - **Lecture 1 Folder:** Covers topics 1–11
-- **Lecture 2 Folder:** Covers topics 12- onwards
+- **Lecture 2 Folder:** Covers topics 12-16
+- **Lecture 3 Folder:** Covers topics 17-21
 
 ## Topics Covered
 
@@ -25,6 +26,11 @@ This repository contains notes and resources for students learning Object-Orient
 14. **C# While Loop**
 15. **For Loop**
 16. **Star Patterm using for loop**
+17. **Break**
+18. **Continue**
+19. **Array**
+20. **Array sort**
+21. **Class Excercise**
 
 ## Contact
 

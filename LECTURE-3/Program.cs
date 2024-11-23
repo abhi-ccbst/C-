@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Threading.Tasks.Dataflow;
+
 Console.WriteLine("Hello, World!");
 
 
@@ -120,3 +122,32 @@ Console.WriteLine($"Age: {age}");
 Console.WriteLine($"Is Student: {isStudent}");
 Console.WriteLine($"Hobbies: {string.Join(", ", hobbies)}");
 Console.WriteLine($"GPA: {gpa}");
+
+
+Console.Write("Enter your name: ");
+String newName = Console.ReadLine();
+
+Console.Write("Enter your age: ");
+int newAge = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Are you a student: ");
+bool newIsStudent = bool.Parse(Console.ReadLine());
+
+Console.Write("Enter how many hoobies you have(int): ");
+int lenght = int.Parse(Console.ReadLine()); //4
+
+string[] newHobbies = new string[lenght];
+for(i = 0; i < lenght; i++) {
+    Console.Write($"Enter you {i + 1} hobby: ");
+    newHobbies[i] = Console.ReadLine();
+}
+
+Console.Write("Enter you GPA: ");
+float gpaNew = float.Parse(Console.ReadLine());
+
+Console.WriteLine("\n--- User Information ---");
+Console.WriteLine($"Name: {newName}");
+Console.WriteLine($"Age: {newAge}");
+Console.WriteLine($"Is Student: {newIsStudent}");
+Console.WriteLine($"Hobbies: {string.Join(". ", newHobbies)}");
+Console.WriteLine($"GPA: {gpaNew}");
