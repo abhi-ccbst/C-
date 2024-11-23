@@ -93,3 +93,30 @@ foreach(int car in counts) {
 Console.WriteLine(counts.Max());
 Console.WriteLine(counts.Min());
 Console.WriteLine(counts.Sum());
+
+Console.Write("Enter your name: ");
+string name = Console.ReadLine();
+
+// Integer input
+Console.Write("Enter your age: ");
+int age = int.Parse(Console.ReadLine());
+
+// Boolean input
+Console.Write("Are you a student? (true/false): ");
+bool isStudent = bool.Parse(Console.ReadLine());
+
+// Array input
+Console.Write("Enter your favorite hobbies (comma-separated): ");
+string[] hobbies = Console.ReadLine().Split(',');
+
+// Float input
+Console.Write("Enter your GPA: ");
+float gpa = float.Parse(Console.ReadLine());
+
+// Output all inputs
+Console.WriteLine("\n--- User Information ---");
+Console.WriteLine($"Name: {name}");
+Console.WriteLine($"Age: {age}");
+Console.WriteLine($"Is Student: {isStudent}");
+Console.WriteLine($"Hobbies: {string.Join(", ", hobbies)}");
+Console.WriteLine($"GPA: {gpa}");
