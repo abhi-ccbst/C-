@@ -61,45 +61,45 @@ class Program {
     //     Console.WriteLine($"My Full Name is {fullName}");
     // }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        bool userInput = true;
-        do {
-            Console.Write("Enter first number: ");
-            int num1 = int.Parse(Console.ReadLine());
+    //     bool userInput = true;
+    //     do {
+    //         Console.Write("Enter first number: ");
+    //         int num1 = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter second number: ");
-            int num2 = int.Parse(Console.ReadLine());
+    //         Console.Write("Enter second number: ");
+    //         int num2 = int.Parse(Console.ReadLine());
             
-            Console.Write("Enter symbol(/,+,-,*): ");
-            char operation = char.Parse(Console.ReadLine());
+    //         Console.Write("Enter symbol(/,+,-,*): ");
+    //         char operation = char.Parse(Console.ReadLine());
 
-            switch (operation) {
-                case '+': 
-                    Console.WriteLine($"Add: {Add(num1, num2)}");
-                    break;
-                case '-':
-                    Console.WriteLine($"Sub: {Sub(num1, num2)}");
-                    break;    
-                case '*':
-                    Console.WriteLine($"Mul: {Mul(num1, num2)}");
-                    break;   
-                case '/':
-                    Console.WriteLine($"Div: {Div(num1, num2)}");
-                    break;  
-                default: 
-                    Console.WriteLine("Wrong input");
-                    break;
-            }
+    //         switch (operation) {
+    //             case '+': 
+    //                 Console.WriteLine($"Add: {Add(num1, num2)}");
+    //                 break;
+    //             case '-':
+    //                 Console.WriteLine($"Sub: {Sub(num1, num2)}");
+    //                 break;    
+    //             case '*':
+    //                 Console.WriteLine($"Mul: {Mul(num1, num2)}");
+    //                 break;   
+    //             case '/':
+    //                 Console.WriteLine($"Div: {Div(num1, num2)}");
+    //                 break;  
+    //             default: 
+    //                 Console.WriteLine("Wrong input");
+    //                 break;
+    //         }
 
-            Console.Write("Do you want to continue(y/n): ");
-            char con = char.Parse(Console.ReadLine());
-            if (con != 'y' && con != 'Y') {
-                userInput = false;
-            }
-            Console.WriteLine("\n");
-        } while(userInput);
-    }
+    //         Console.Write("Do you want to continue(y/n): ");
+    //         char con = char.Parse(Console.ReadLine());
+    //         if (con != 'y' && con != 'Y') {
+    //             userInput = false;
+    //         }
+    //         Console.WriteLine("\n");
+    //     } while(userInput);
+    // }
 
     /**
     * This method is taking 2 arg and doing addition operation on this
@@ -139,6 +139,75 @@ class Program {
     */
     static int Div(int a, int b) {
         return a / b;
+    }
+
+
+    static void Main(string[] args) {
+        bool userInput = true;
+        do {
+            Console.Write("Enter the first string: ");
+            string str1 = Console.ReadLine();
+
+            Console.Write("Enter the second string: ");
+            string str2 = Console.ReadLine();
+            
+            Console.WriteLine("Choose an operation:");
+            Console.WriteLine("1: Concatenate");
+            Console.WriteLine("2: Find Length");
+            Console.WriteLine("3: Reverse");
+            Console.WriteLine("4: Check if second string is a substring of the first");
+            Console.Write("Enter your choice (1/2/3/4): ");
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice) {
+                case 1: 
+                    Console.WriteLine($"Concatenated String: {Concatenate(str1, str2)}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Length of First String: {GetLength(str1)}");
+                    Console.WriteLine($"Length of Second String: {GetLength(str2)}");
+                    break;    
+                case 3:
+                    Console.WriteLine($"Reversed First String: {ReverseString(str1)}");
+                    Console.WriteLine($"Reversed Second String: {ReverseString(str2)}");
+                    break;   
+                case 4:
+                    Console.WriteLine($"Is Second String a Substring of First? {IsSubstring(str1, str2)}");
+                    break;  
+                default: 
+                    Console.WriteLine("Wrong input");
+                    break;
+            }
+
+            Console.Write("Do you want to continue (y/n): ");
+            char con = char.Parse(Console.ReadLine());
+            if (con != 'y' && con != 'Y') {
+                userInput = false;
+            }
+            Console.WriteLine("\n");
+        } while(userInput);
+    }
+
+    // Method to concatenate two strings
+    static string Concatenate(string a, string b) {
+        return $"{a}{b}";
+    }
+
+    // Method to get the length of a string
+    static int GetLength(string str) {
+        return str.Length;
+    }
+
+    // Method to reverse a string
+    static string ReverseString(string str) {
+        char[] charArray = str.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+
+    // Method to check if one string is a substring of another
+    static bool IsSubstring(string a, string b) {
+        return a.Contains(b);
     }
 }
 
