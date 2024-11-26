@@ -1,9 +1,11 @@
 ﻿// // See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
 
+using System.Globalization;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
+using System.Xml.Serialization;
 
 class Program {
     // static void Main(string[] args) {
@@ -142,51 +144,51 @@ class Program {
     }
 
 
-    static void Main(string[] args) {
-        bool userInput = true;
-        do {
-            Console.Write("Enter the first string: ");
-            string str1 = Console.ReadLine();
+    // static void Main(string[] args) {
+    //     bool userInput = true;
+    //     do {
+    //         Console.Write("Enter the first string: ");
+    //         string str1 = Console.ReadLine();
 
-            Console.Write("Enter the second string: ");
-            string str2 = Console.ReadLine();
+    //         Console.Write("Enter the second string: ");
+    //         string str2 = Console.ReadLine();
             
-            Console.WriteLine("Choose an operation:");
-            Console.WriteLine("1: Concatenate");
-            Console.WriteLine("2: Find Length");
-            Console.WriteLine("3: Reverse");
-            Console.WriteLine("4: Check if second string is a substring of the first");
-            Console.Write("Enter your choice (1/2/3/4): ");
-            int choice = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Choose an operation:");
+    //         Console.WriteLine("1: Concatenate");
+    //         Console.WriteLine("2: Find Length");
+    //         Console.WriteLine("3: Reverse");
+    //         Console.WriteLine("4: Check if second string is a substring of the first");
+    //         Console.Write("Enter your choice (1/2/3/4): ");
+    //         int choice = int.Parse(Console.ReadLine());
 
-            switch (choice) {
-                case 1: 
-                    Console.WriteLine($"Concatenated String: {Concatenate(str1, str2)}");
-                    break;
-                case 2:
-                    Console.WriteLine($"Length of First String: {GetLength(str1)}");
-                    Console.WriteLine($"Length of Second String: {GetLength(str2)}");
-                    break;    
-                case 3:
-                    Console.WriteLine($"Reversed First String: {ReverseString(str1)}");
-                    Console.WriteLine($"Reversed Second String: {ReverseString(str2)}");
-                    break;   
-                case 4:
-                    Console.WriteLine($"Is Second String a Substring of First? {IsSubstring(str1, str2)}");
-                    break;  
-                default: 
-                    Console.WriteLine("Wrong input");
-                    break;
-            }
+    //         switch (choice) {
+    //             case 1: 
+    //                 Console.WriteLine($"Concatenated String: {Concatenate(str1, str2)}");
+    //                 break;
+    //             case 2:
+    //                 Console.WriteLine($"Length of First String: {GetLength(str1)}");
+    //                 Console.WriteLine($"Length of Second String: {GetLength(str2)}");
+    //                 break;    
+    //             case 3:
+    //                 Console.WriteLine($"Reversed First String: {ReverseString(str1)}");
+    //                 Console.WriteLine($"Reversed Second String: {ReverseString(str2)}");
+    //                 break;   
+    //             case 4:
+    //                 Console.WriteLine($"Is Second String a Substring of First? {IsSubstring(str1, str2)}");
+    //                 break;  
+    //             default: 
+    //                 Console.WriteLine("Wrong input");
+    //                 break;
+    //         }
 
-            Console.Write("Do you want to continue (y/n): ");
-            char con = char.Parse(Console.ReadLine());
-            if (con != 'y' && con != 'Y') {
-                userInput = false;
-            }
-            Console.WriteLine("\n");
-        } while(userInput);
-    }
+    //         Console.Write("Do you want to continue (y/n): ");
+    //         char con = char.Parse(Console.ReadLine());
+    //         if (con != 'y' && con != 'Y') {
+    //             userInput = false;
+    //         }
+    //         Console.WriteLine("\n");
+    //     } while(userInput);
+    // }
 
     // Method to concatenate two strings
     static string Concatenate(string a, string b) {
@@ -209,7 +211,40 @@ class Program {
     static bool IsSubstring(string a, string b) {
         return a.Contains(b);
     }
+
+
+
+    static void Main(string[] args) {
+        Console.WriteLine("Enter the number of row you want: ");
+        int row =  int.Parse(Console.ReadLine()); // int row = 8;
+        int count = row -1;
+        for (int i =1; i <= row; i++) {
+            for (int j = 1; j <= count; j++) {
+                Console.Write(" ");
+            }
+            count--;
+            for(int j = 1; j <= 2 * i -1; j++) {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+        count = 1;
+        for (int i = 1; i <= row -1; i ++) {
+            for(int j = 1; j <= count; j++) {
+                Console.Write(" ");
+            }
+            count++;
+            for(int j = 1; j <= 2 * (row - i) - 1; j ++) {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
 }
+
+// Old num: 2 * i -1
+// Even num : 2 * i 
+
 
 
 /*
