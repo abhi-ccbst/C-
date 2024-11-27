@@ -1,0 +1,15 @@
+/Users/abhipatel/C#/C-/LECTURE-6/bin/Debug/net9.0/LECTURE-6
+/Users/abhipatel/C#/C-/LECTURE-6/bin/Debug/net9.0/LECTURE-6.deps.json
+/Users/abhipatel/C#/C-/LECTURE-6/bin/Debug/net9.0/LECTURE-6.runtimeconfig.json
+/Users/abhipatel/C#/C-/LECTURE-6/bin/Debug/net9.0/LECTURE-6.dll
+/Users/abhipatel/C#/C-/LECTURE-6/bin/Debug/net9.0/LECTURE-6.pdb
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.AssemblyInfoInputs.cache
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.AssemblyInfo.cs
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.csproj.CoreCompileInputs.cache
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.sourcelink.json
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.dll
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/refint/LECTURE-6.dll
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.pdb
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/LECTURE-6.genruntimeconfig.cache
+/Users/abhipatel/C#/C-/LECTURE-6/obj/Debug/net9.0/ref/LECTURE-6.dll
