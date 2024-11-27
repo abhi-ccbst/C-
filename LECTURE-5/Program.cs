@@ -38,15 +38,17 @@ class Program {
         program.myMethod("Abhi");
         program1.myMethod("Patel");
 
-        Car car = new Car();
-        Console.WriteLine(car.company);
-
-
         Console.WriteLine("\n\n\n");
         User user = new User();
         user.Name = "Abhi";
         Console.WriteLine(user.Name);
-    }
+        Console.WriteLine("\n\n\n");
+
+        Car car =  new Car();
+        Console.WriteLine(car.brand);
+        car.printSomething();
+        
+    }   
 
     public void myMethod(string someName) {
         Console.WriteLine($"Value of car is {car}");
@@ -59,10 +61,7 @@ class Program {
 
 }
 
-class Car {
-    public string company = "Honda";
-    string abc = "abc"; //private
-}
+
 
 class User {
     private string name;
