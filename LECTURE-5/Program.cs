@@ -40,6 +40,12 @@ class Program {
 
         Car car = new Car();
         Console.WriteLine(car.company);
+
+
+        Console.WriteLine("\n\n\n");
+        User user = new User();
+        user.Name = "Abhi";
+        Console.WriteLine(user.Name);
     }
 
     public void myMethod(string someName) {
@@ -58,6 +64,19 @@ class Car {
     string abc = "abc"; //private
 }
 
+class User {
+    private string name;
+
+    public string Name {
+        get {
+            return name;
+        }
+        set {
+            name = value;
+        }
+    }
+}
+
 /*
 Any one whio create an object of an class they can invoke any public method.
 */
@@ -71,4 +90,13 @@ Assign on classes, field, method and properties
 
 public: The code is accessible for all classes
 private: The code is only accessible within classes 
+*/
+
+/*
+Properties: is like an combination of methods and it has 2 metgods: get() and set()
+Encapsulation: is used when we have to make sure thart sensitive dara is hoidden from user 
+to archive this: 
+1. declare fields/variable as private
+2. provide public get and set methods, through properties 
+
 */
