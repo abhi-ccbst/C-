@@ -1,20 +1,11 @@
-// abstract class Car {
-//     public void print() {
-//         Console.WriteLine("I am in Car class");
-//     }
-
-//     public virtual void name() {
-//         Console.WriteLine("I am in Car class.");
-//     }
-
-//     public abstract void carPrice();
-// }
-
-// interface Car {
-//     void name();
-// }
-
-// interface Vehicle {
-//     void carPrice();
-//     int test(int abc);
-// }
+class Car : Vehicle
+{
+    public string CarName {set; get;}
+    public Car (string make, string model, int year, string carName) : base(make, model, year) {
+        CarName = carName;
+    }
+    public override void display()
+    {
+        Console.WriteLine($"Car:\t{CarName}");
+    }
+}
