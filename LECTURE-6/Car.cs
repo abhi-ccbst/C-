@@ -10,11 +10,11 @@
 //     public abstract void carPrice();
 // }
 
-interface Car {
-    void name();
-}
+// interface Car {
+//     void name();
+// }
 
-interface Vehicle {
-    void carPrice();
-    int test(int abc);
-}
+// interface Vehicle {
+//     void carPrice();
+//     int test(int abc);
+// }

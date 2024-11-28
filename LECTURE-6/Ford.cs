@@ -13,19 +13,19 @@
 //     }
 // }
 
-class Ford : Car , Vehicle
-{
-    public void name()
-    {
-        Console.WriteLine("I am in Ford class");
-    }
+// class Ford : Car , Vehicle
+// {
+//     public void name()
+//     {
+//         Console.WriteLine("I am in Ford class");
+//     }
 
-    public void carPrice()
-    {
-        Console.WriteLine("The price of Ford is $40K");
-    }
+//     public void carPrice()
+//     {
+//         Console.WriteLine("The price of Ford is $40K");
+//     }
 
-    public int test(int abc ) {
-        return 0;
-    }
-}
+//     public int test(int abc ) {
+//         return 0;
+//     }
+// }

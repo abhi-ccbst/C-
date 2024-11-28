@@ -14,18 +14,18 @@
 // } 
 
 
-class Honda : Car, Vehicle {
+// class Honda : Car, Vehicle {
 
-    public void name()
-    {
-        Console.WriteLine("I am in Honda class");
-    }
+//     public void name()
+//     {
+//         Console.WriteLine("I am in Honda class");
+//     }
 
-    public void carPrice()
-    {
-        Console.WriteLine("The price of Honda is $30K");
-    }
-    public int test(int abc ) {
-        return 0;
-    }
-}
+//     public void carPrice()
+//     {
+//         Console.WriteLine("The price of Honda is $30K");
+//     }
+//     public int test(int abc ) {
+//         return 0;
+//     }
+// }
