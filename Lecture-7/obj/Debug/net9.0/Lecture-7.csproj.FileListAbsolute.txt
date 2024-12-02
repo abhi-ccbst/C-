@@ -1,0 +1,15 @@
+/Users/abhipatel/C#/C-/Lecture-7/bin/Debug/net9.0/Lecture-7
+/Users/abhipatel/C#/C-/Lecture-7/bin/Debug/net9.0/Lecture-7.deps.json
+/Users/abhipatel/C#/C-/Lecture-7/bin/Debug/net9.0/Lecture-7.runtimeconfig.json
+/Users/abhipatel/C#/C-/Lecture-7/bin/Debug/net9.0/Lecture-7.dll
+/Users/abhipatel/C#/C-/Lecture-7/bin/Debug/net9.0/Lecture-7.pdb
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.AssemblyInfoInputs.cache
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.AssemblyInfo.cs
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.csproj.CoreCompileInputs.cache
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.sourcelink.json
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.dll
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/refint/Lecture-7.dll
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.pdb
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/Lecture-7.genruntimeconfig.cache
+/Users/abhipatel/C#/C-/Lecture-7/obj/Debug/net9.0/ref/Lecture-7.dll
