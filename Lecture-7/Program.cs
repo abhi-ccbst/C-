@@ -9,6 +9,14 @@ Replace()        Replaces the contents of a file with the contents of another fi
 WriteAllText()   Creates a new file and writes the contents to it. If the file already exist, it will be overwritten. 
 */
 
+/*
+try {
+    //Block of code to try
+} catch (Exception e) {
+    Block of code to handle errors
+}
+*/
+
 class Program {
     enum Drink {
         CHAI,  // 0
@@ -56,7 +64,7 @@ class Program {
         File.Create("bin/test1.txt").Close();
         File.Create("bin/test2.txt").Close();
         File.Replace("bin/test.txt", "bin/test1.txt", "bin/test2.txt");
-
+        File.Delete("tes45.txt");
         // Copy the file
         File.Copy("bin/test1.txt", "tes45.txt");
 
@@ -70,5 +78,21 @@ class Program {
         // Final check if the file was deleted
         isExists = File.Exists("bin/test.txt");
         Console.WriteLine(isExists); // Should print False
+
+        try{
+            int[] myNum = {1,2,3};
+            Console.WriteLine(myNum[0]);
+        } catch (IndexOutOfRangeException e) {
+            Console.WriteLine(e.Message);
+        } finally {
+            Console.WriteLine("The 'try catch' is finished.");
+        }
+        try{
+            throw new FileNotFoundException("File is not present ");
+        } catch(FileNotFoundException e) {
+            Console.WriteLine(e.Message);
+        }
+       
+        Console.WriteLine("It is running");
     }
 }
