@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
@@ -14,11 +15,11 @@ namespace InClassTODOList {
             PersonName = names;
         }
         public abstract void AddTask();
-        public abstract List<Task> LoadTasks();
+        public abstract List<Task> LoadTasks(Names CreatedBy = Names.Default);
+        public abstract List<Task> LoadTasks(Names CreatedBy, bool isCompleted, DateTime deadLine);
 
         public abstract void SaveTasks(List<Task> tasks);
-        public abstract void ViewTasks();
-
+        public abstract void ViewTasks(List<Task> tasksList = null);
         public abstract void EditTask();
         public abstract void MarkTaskCompleted();
     }
@@ -88,12 +89,31 @@ namespace InClassTODOList {
             Console.WriteLine("Task updated successfully");
         }
 
-        public override List<Task> LoadTasks()
+        public override List<Task> LoadTasks(Names createdBy = Names.Default)
         {
             string json = File.ReadAllText(TaskFile);
-            return JsonSerializer.Deserialize<List<Task>>(json);
+            List<Task> tasks = JsonSerializer.Deserialize<List<Task>>(json);
+            if (createdBy != Names.Default) {
+                tasks = tasks.Where(x => x.CreatedBy == createdBy).ToList();
+            }
+
+
+            return tasks;
         }
 
+        public override List<Task> LoadTasks(Names createdBy, bool isCompleted, DateTime deadLine)
+        {
+            string json = File.ReadAllText(TaskFile);
+            List<Task> tasks = JsonSerializer.Deserialize<List<Task>>(json);
+            if (tasks.Count > 0) {
+                if (createdBy != Names.Default) {
+                    tasks = tasks.Where(x => x.CreatedBy == createdBy).ToList();
+                }
+                tasks = tasks.Where(x => x.IsCompleted == isCompleted && x.DeadLine > deadLine).ToList();
+                
+            }
+            return tasks;
+        }
         public override void MarkTaskCompleted()
         {
             List<Task> tasks = LoadTasks();
@@ -126,9 +146,13 @@ namespace InClassTODOList {
             File.WriteAllText(TaskFile, json);
         }
 
-        public override void ViewTasks()
+        public override void ViewTasks(List<Task> tasksList = null)
         {
-            List<Task> tasks = LoadTasks();
+            List<Task> tasks = tasksList;
+            if (tasksList == null)
+            {
+                tasks = LoadTasks();
+            }
             if (tasks.Count == 0)
             {
                 Console.WriteLine("No tasks found.");
@@ -141,6 +165,8 @@ namespace InClassTODOList {
                 Console.WriteLine($"{i + 1}. | CreatedBy: {tasks[i].CreatedBy} | {tasks[i].Description} | Deadline: {tasks[i].DeadLine} | Status: {completed} | CreatedAt: {tasks[i].CreatedAt} | UpdatedAt | {tasks[i].UpdatedAt}");
             }
         }
+
+        
     }
 
     public class Task {
@@ -164,7 +190,8 @@ namespace InClassTODOList {
     public enum Names {
         Abhi,  // 0
         Peter, // 1
-        Harry //2
+        Harry, //2
+        Default //
     }
 
     public class Program 
@@ -184,6 +211,10 @@ namespace InClassTODOList {
             }
 
             FileManagement fileManagement = new FileManagementInfo(file, name);
+            DateTime d2 = new DateTime( 2022, 01, 01, 0, 0, 0 );
+
+            List<Task> tasks = fileManagement.LoadTasks(Names.Default, false, d2);
+            fileManagement.ViewTasks(tasks);
             while (true)
             {
                 Console.WriteLine("\n=== To-Do Task List ===");
